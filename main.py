@@ -47,7 +47,6 @@ while True:
         messages=memory,
         model="qwen/qwen3.8-27b",  # model used
         tools=jarvis_tools,  # give the model access to the tools
-        tool_choice="auto",  # allow the model to choose which tool to use
     )
 
     ai_reply = chat_completion.choices[0].message
@@ -75,7 +74,6 @@ while True:
                 messages=memory,
                 model="qwen/qwen3.8-27b",
                 tools=jarvis_tools,
-                tool_choice="auto"
             )
 
             final_reply = final_completion.choices[0].message.content
